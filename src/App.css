@@ -1,0 +1,523 @@
+/*
+1. Posicionamiento.
+2. Modelo de caja.
+3. Tipografía.
+4. Visualización.
+5. Otros
+*/
+
+:root {
+  /* Colors */
+  --bitcoin-orange: #F7931A;
+  --soft-orange: #ffe9d4;
+  --secondary-blue: #1a94f7;
+  --warm-black: #201e1c;
+  --black: #282623;
+  --grey: #757575;
+  --light-grey: #808080;
+  --off-white: #faf8f7;
+  --just-white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Header */
+header {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  min-width: 320px;
+  height: 334px;
+  text-align: center;
+  background: linear-gradient(
+      207.8deg,
+       var(--black) 16.69%, 
+       var(--bitcoin-orange) 100%);
+}
+
+header img {
+  width: 151px;
+  height: 24px;
+  margin-top: 60px;
+  align-self: center;
+}
+
+/* Contenedor de Título del Header */
+.header--title-container {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  height: 218px;
+  margin-top: 50px;
+  text-align: center;
+  align-self: center;
+}
+
+.header--title-container h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+
+.header--title-container p {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--soft-orange);
+} 
+
+/* Botón en el Header */
+.header--title-container .header--button {
+  position: absolute;
+  left: calc(50% - 118px);
+  top: 270px;
+  display: block;
+  margin-top: 35px;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background: var(--off-white);
+
+  /* Sombras */
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.20);
+  border: none;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.header--title-container .header--button span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url('./assets/icons/down-arrow.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Contenedor Principal de Exchange */
+.main-exchange-container {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.main-exchange-container--title {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-exchange-container .backgroundImg  {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-image: url('./assets/imgs/Bitcoin.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-exchange-container h2 {
+  margin-bottom:  30px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--black);
+}
+
+.main-exchange-container p {
+  margin-bottom: 30px;
+  font-size:1.4rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  color: var(--grey);
+}
+
+/* Tabla de Monedas */
+.main-currency-table {
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  height: 360px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+.main-currency-table .currency-table--title {
+  margin-bottom:  15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  color: var(--bitcoin-orange);
+}
+
+.main-table-container {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+  background-color: var(--off-white);
+}
+
+.currency-table--container td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 3.9rem;
+  color: var(--grey);
+  background-color: var(--just-white);
+}
+
+.currency-table--container .table__top-left {
+  border-radius: 15px 0 0 0;
+}
+
+.currency-table--container .table__top-right {
+  border-radius:0 15px 0 0;
+}
+
+.currency-table--container .table__bottom-left {
+  border-radius: 0 0 0 15px;
+}
+
+.currency-table--container .table__bottom-right {
+  border-radius: 0 0 15px 0;
+}
+
+.currency-table--container .table__right {
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 1.7rem;
+  padding-top: 20px;
+  padding-bottom: 16px;
+  color: #757575;
+}
+
+.currency-table--container .down {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-image: url('./assets/icons/trending-down.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.currency-table--date {
+  width: 190px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top:  15px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--soft-orange);
+}
+
+.currency-table--date p {
+  font-size:  1.2rem;
+  line-height: 1.5rem;
+  color: var(--warm-black);
+}
+
+.currency-table--date b {
+  margin-right:5px;
+}
+
+/* Detalles del Producto */
+.main-product-detail {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background-color: var(--warm-black);
+}
+
+.product-detail--batata-logo {
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: -10px;
+  left: calc(50% - 30px);
+  background-image: url("./assets/icons/batata.svg");
+}
+
+.product-detail--title {
+  width:  90%;
+  min-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  color: var(--just-white);
+}
+
+.product-detail--title p {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--light-grey);
+}
+
+.product-detail--card {
+  width: 90%;
+  min-width: 280px;
+  max-width: 400px;
+  height: 150px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: var(--black);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.16);
+}
+
+.product-detail--card img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product--card-title {
+  margin-left: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--just-white);
+}
+
+.product--card-body {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: var(--light-grey);
+}
+
+/* Contenedor de Imagen de Bitcoin */
+.bitcoin-img-container {
+  width: 100%;
+  min-width: 320px;
+  height: 50vh;
+  background-image: url("./assets/imgs/bitcoinbaby2x.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bitcoin-img-container h2 {
+  padding-top:  50px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  text-align: center;
+  color: var(--just-white);
+}
+
+/* Media Queries */
+
+/* Escritorios Grandes (≥ 1200px) */
+@media (min-width: 1200px) {
+  /* Header */
+  header {
+    height: 400px; /* Aumentar altura */
+    padding: 40px 20px; /* Añadir padding */
+  }
+
+  header img {
+    width: 200px; /* Aumentar tamaño del logo */
+    height: 32px;
+    margin-top: 80px; /* Incrementar margen superior */
+  }
+
+  /* Contenedor de Título del Header */
+  .header--title-container {
+    height: 250px; /* Aumentar altura */
+    margin-top: 70px; /* Incrementar margen superior */
+  }
+
+  .header--title-container h1 {
+    font-size: 3rem; /* Aumentar tamaño de fuente */
+    line-height: 3.2rem;
+  }
+
+  .header--title-container p {
+    font-size: 1.8rem; /* Aumentar tamaño de fuente */
+    line-height: 2.2rem;
+  }
+
+  /* Botón en el Header */
+  .header--title-container .header--button {
+    width: 300px; /* Aumentar ancho */
+    height: 60px; /* Aumentar altura */
+    padding: 20px; /* Aumentar padding */
+    font-size: 1.6rem; /* Aumentar tamaño de fuente */
+    left: calc(50% - 150px); /* Ajustar posición */
+    top: 320px; /* Ajustar posición */
+  }
+
+  .header--title-container .header--button span {
+    width: 16px; /* Aumentar tamaño del icono */
+    height: 10px;
+    margin-left: 12px; /* Incrementar margen */
+  }
+
+  /* Contenedor Principal de Exchange */
+  .main-exchange-container {
+    padding-top: 100px; /* Incrementar padding superior */
+    padding-bottom: 50px; /* Incrementar padding inferior */
+  }
+
+  .main-exchange-container--title {
+    max-width: 1200px; /* Aumentar max-width */
+  }
+
+  .main-exchange-container .backgroundImg {
+    width: 250px; /* Aumentar tamaño de imagen */
+    height: 250px;
+    margin-bottom: 70px; /* Incrementar margen inferior */
+  }
+
+  .main-exchange-container h2 {
+    font-size: 3rem; /* Aumentar tamaño de fuente */
+    line-height: 3.2rem;
+  }
+
+  .main-exchange-container p {
+    font-size: 1.8rem; /* Aumentar tamaño de fuente */
+    line-height: 2.2rem;
+  }
+
+  /* Tabla de Monedas */
+  .main-currency-table {
+    width: 60%; /* Reducir porcentaje para dejar espacio */
+    max-width: 800px; /* Aumentar max-width */
+    height: 450px; /* Incrementar altura */
+  }
+
+  .main-currency-table .currency-table--title {
+    font-size: 2.4rem; /* Aumentar tamaño de fuente */
+    line-height: 3rem;
+  }
+
+  .main-table-container {
+    width: 95%; /* Ajustar ancho */
+    max-width: 400px; /* Aumentar max-width */
+    height: 300px; /* Incrementar altura */
+  }
+
+  .currency-table--container td {
+    font-size: 1.8rem; /* Aumentar tamaño de fuente */
+    line-height: 4rem; /* Incrementar line-height */
+  }
+
+  .currency-table--container .table__right {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    color: #757575;
+  }
+
+  .currency-table--container .down {
+    width: 20px; /* Aumentar tamaño del icono */
+    height: 20px;
+    margin-left: 12px; /* Incrementar margen */
+  }
+
+  .currency-table--date {
+    width: 220px; /* Aumentar ancho */
+    height: 35px; /* Aumentar altura */
+    margin-top: 20px; /* Incrementar margen superior */
+    padding: 10px; /* Incrementar padding */
+    font-size: 1.4rem; /* Aumentar tamaño de fuente */
+  }
+
+  .currency-table--date p {
+    font-size: 1.4rem; /* Aumentar tamaño de fuente */
+    line-height: 2rem;
+  }
+
+  /* Detalles del Producto */
+  .main-product-detail {
+    padding: 30px 20px; /* Incrementar padding */
+  }
+
+  .product-detail--batata-logo {
+    width: 50px; /* Aumentar tamaño del logo */
+    height: 30px;
+    top: -15px; /* Ajustar posición vertical */
+  }
+
+  .product-detail--title {
+    width: 85%; /* Ajustar ancho */
+    max-width: 1200px; /* Aumentar max-width */
+    margin-top: 70px; /* Incrementar margen superior */
+  }
+
+  .product-detail--title p {
+    font-size: 1.6rem; /* Aumentar tamaño de fuente */
+    line-height: 2rem;
+  }
+
+  .product-detail--card {
+    width: 80%; /* Ajustar ancho */
+    max-width: 500px; /* Aumentar max-width */
+    height: 200px; /* Incrementar altura */
+    padding: 20px; /* Aumentar padding */
+  }
+
+  .product-detail--card img {
+    width: 25px; /* Aumentar tamaño de imagen */
+    height: 25px;
+    margin-bottom: 15px; /* Incrementar margen */
+  }
+
+  .product--card-title {
+    font-size: 2rem; /* Aumentar tamaño de fuente */
+    line-height: 2rem;
+  }
+
+  .product--card-body {
+    font-size: 1.6rem; /* Aumentar tamaño de fuente */
+    line-height: 2rem;
+  }
+
+  /* Contenedor de Imagen de Bitcoin */
+  .bitcoin-img-container {
+    height: 60vh; /* Aumentar altura */
+  }
+
+  .bitcoin-img-container h2 {
+    font-size: 3rem; /* Aumentar tamaño de fuente */
+    line-height: 3.2rem;
+    padding-top: 60px; /* Incrementar padding superior */
+  }
+}
