@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': { // Prefijo que usarás en las solicitudes
+      '/api': { 
         target: 'https://pro-api.coinmarketcap.com',
         changeOrigin: true,
         secure: true,
@@ -15,3 +15,4 @@ export default defineConfig({
     }
   }
 });
+

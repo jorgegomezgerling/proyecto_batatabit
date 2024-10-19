@@ -19,15 +19,25 @@
   --just-white: #fff;
 }
 
+#root {
+  width: 100%;
+  height: 100%;
+}
+
 * {
-  box-sizing: border-box;
+  box-sizing:border-box;
   margin: 0;
   padding: 0;
 }
 
+
 html {
   font-size: 62.5%;
   font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: var(--off-white);
 }
 
 /* Header */
@@ -46,15 +56,15 @@ header {
 }
 
 header img {
-  width: 151px;
-  height: 24px;
-  margin-top: 60px;
-  align-self: center;
+  display: block; 
+  margin: 30px auto 0; 
+  width: 151px; 
+  height: 24px; 
 }
 
-/* Contenedor de Título del Header */
+
 .header--title-container {
-  width: 90%;
+  width: 98%;
   min-width: 288px;
   max-width: 900px;
   height: 218px;
@@ -64,21 +74,21 @@ header img {
 }
 
 .header--title-container h1 {
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: bold;
   line-height: 2.6rem;
   color: var(--just-white);
 }
 
 .header--title-container p {
-  margin-top: 25px;
+  margin-top: 45px;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
   color: var(--soft-orange);
 } 
 
-/* Botón en el Header */
+
 .header--title-container .header--button {
   position: absolute;
   left: calc(50% - 118px);
@@ -118,10 +128,28 @@ header img {
   padding-top: 80px;
   padding-bottom: 30px;
   text-align: center;
+  background-color: var(--off-white);
+}
+
+.payment-container {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: var(--off-white);
+  margin-top: 1px;
 }
 
 .main-exchange-container--title {
   width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.payment-container--title {
+  width: 100%;
   min-width: 288px;
   max-width: 900px;
   margin: 0 auto;
@@ -146,6 +174,17 @@ header img {
   color: var(--black);
 }
 
+.payment-container h2 {
+  margin-bottom:  30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--black);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+}
+
 .main-exchange-container p {
   margin-bottom: 30px;
   font-size:1.4rem;
@@ -154,7 +193,15 @@ header img {
   color: var(--grey);
 }
 
-/* Tabla de Monedas */
+.payment-container p {
+  margin-bottom: 30px;
+  font-size:14px;
+  font-weight: 500;
+  line-height: 1.6rem;
+  color: var(--grey);
+}
+
+
 .main-currency-table {
   width: 70%;
   min-width: 235px;
@@ -165,7 +212,7 @@ header img {
 }
 
 .main-currency-table .currency-table--title {
-  margin-bottom:  15px;
+  margin-bottom: 15px;
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 2.5rem;
@@ -173,11 +220,16 @@ header img {
 }
 
 .main-table-container {
-  width: 90%;
+  width: 100%;
   min-width: 230px;
   max-width: 300px;
-  height: 250px;
+  height: 290px;
   margin: 0 auto;
+}
+
+.currency-table--container {
+  border-collapse: separate;
+  overflow: hidden;
   background-color: var(--off-white);
 }
 
@@ -188,7 +240,9 @@ header img {
   line-height: 3.9rem;
   color: var(--grey);
   background-color: var(--just-white);
+  padding: 10px;
 }
+
 
 .currency-table--container .table__top-left {
   border-radius: 15px 0 0 0;
@@ -227,13 +281,15 @@ header img {
 }
 
 .currency-table--date {
-  width: 190px;
-  height: 30px;
-  margin: 0 auto;
-  margin-top:  15px;
+  margin: auto;
+  margin-top: 15px;
   padding: 8px;
   border-radius: 8px;
   background-color: var(--soft-orange);
+  display: inline-block; 
+  margin-bottom: 50px;
+  position: relative; 
+  z-index: 10; 
 }
 
 .currency-table--date p {
@@ -243,17 +299,19 @@ header img {
 }
 
 .currency-table--date b {
-  margin-right:5px;
+  margin-right: 1px
 }
 
-/* Detalles del Producto */
+
 .main-product-detail {
   position: relative;
   width: 100%;
   min-width: 320px;
   height: auto;
-  padding: 20px 10px;
+  padding: 20px 0px;
   background-color: var(--warm-black);
+  z-index: 0;
+  margin-top: 100px;
 }
 
 .product-detail--batata-logo {
@@ -266,7 +324,7 @@ header img {
 }
 
 .product-detail--title {
-  width:  90%;
+  width: 90%;
   min-width: 300px;
   height: auto;
   margin: 0 auto;
@@ -321,7 +379,6 @@ header img {
   color: var(--light-grey);
 }
 
-/* Contenedor de Imagen de Bitcoin */
 .bitcoin-img-container {
   width: 100%;
   min-width: 320px;
@@ -334,190 +391,386 @@ header img {
 
 .bitcoin-img-container h2 {
   padding-top:  50px;
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: bold;
   line-height: 2.6rem;
   text-align: center;
-  color: var(--just-white);
+  color: var(--off-white);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
 }
 
-/* Media Queries */
+.footer-container {
+  background-color: var(--bitcoin-orange);
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
 
-/* Escritorios Grandes (≥ 1200px) */
-@media (min-width: 1200px) {
-  /* Header */
+.footer--batata-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding-right: 30px; 
+}
+
+.footer-content {
+  padding-left: 30px;
+  text-align: left; 
+  flex-grow: 1; 
+}
+
+.footer--batata-logo {
+  width: 40.57px; 
+  height: 24px; 
+  background-image: url("./assets/icons/batata.svg");
+  background-size: contain;
+  background-repeat: no-repeat; 
+  margin-top: 5px; 
+}
+
+.batata-subtitle {
+  margin-top: 5px; 
+  font-size: 8px; 
+  color: var(--off-white); 
+}
+
+.footer-links {
+  margin-top: 14px; 
+}
+
+.footer-links td {
+  color: var(--just-white); 
+  margin: 0 15px; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 10px 15px 10px;
+  margin-top: auto;
+  margin-bottom: 50px;
+  background-color: var(--off-white);
+}
+
+.carousel-item {
+  margin: 0 20px; 
+  padding: 20px; 
+  border: 1px solid var(--just-white); 
+  border-radius: 10px; 
+  text-align: center; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 190px; 
+  height: 247px; 
+  position: relative;
+  background-color: var(--just-white);
+}
+
+.carousel-button {
+  background-color: transparent; 
+  color: #007bff; 
+  border: none; 
+  font-size: 14px; 
+  cursor: pointer; 
+  margin: 0 10px; 
+  transition: color 0.3s; 
+  border-radius: 4px;
+}
+
+.carousel-button:hover {
+  color: #0056b3; 
+}
+
+/* Estilos para títulos */
+.carousel-item h3 {
+  margin: 10px 0 10px;  
+  font-size: 14px; 
+  color: #000000;
+}
+
+/* Estilos para precios */
+.price-container {
+  position: relative; 
+  display: inline-block; 
+  margin: 0 0 10px;
+}
+
+.price-symbol {
+  position: absolute; 
+  font-size: 12px; 
+  top: 6.5px; 
+  left: -10px; 
+  right: px;
+  color: #000; 
+}
+
+.price {
+  margin: 0; 
+  font-size: 52px; 
+  font-weight: 700; 
+  line-height: 62.93px; 
+  letter-spacing: -0.08em; 
+  text-align: left; 
+  color: #000000; 
+}
+
+/* Estilos para la descripción */
+.description {
+  margin: 0 0 20px; 
+  color: #444; 
+  font-size: 12px; 
+  line-height: 1.5;
+  text-align: center; 
+}
+
+.choice-button {
+  border: 2px solid #F7931A; 
+  font-size: 13px;
+  background-color: #FAF8F7;
+  color: #201E1C;
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  gap: 5px; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  width: 151px;
+  height: 48px;
+  border-radius: 4px;
+}
+
+.choice-button svg {
+  width: 16px;
+  height: 16px;
+  stroke: #F7931A; 
+  transition: stroke 0.3s ease;
+}
+
+.choice-button:hover svg {
+  stroke: #FF9900; 
+}
+
+
+.recommended-badge {
+  background-color: #F7931A; 
+  color: white; 
+  padding: 5px 10px; 
+  border-radius: 10px; 
+  position: absolute; 
+  top: -15px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  font-size: 12px; 
+  font-weight: bold; 
+  z-index: 1; 
+  width: 101px; 
+  height: 31px; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  line-height: 1; 
+}
+
+
+.carousel-button {
+  background-color: transparent;  
+  border: none;                   
+  cursor: pointer;               
+  padding: 10px;                  
+}
+
+.carousel-button svg {
+  width: 24px;        
+  height: 24px;       
+  stroke: #BABABA;    
+  transition: stroke 0.3s;  
+}
+
+.carousel-button:hover svg {
+  stroke: #0056b3;  
+}
+
+
+@media (min-width: 1024px) {
   header {
-    height: 400px; /* Aumentar altura */
-    padding: 40px 20px; /* Añadir padding */
-  }
-
-  header img {
-    width: 200px; /* Aumentar tamaño del logo */
-    height: 32px;
-    margin-top: 80px; /* Incrementar margen superior */
-  }
-
-  /* Contenedor de Título del Header */
-  .header--title-container {
-    height: 250px; /* Aumentar altura */
-    margin-top: 70px; /* Incrementar margen superior */
+    height: 400px;
   }
 
   .header--title-container h1 {
-    font-size: 3rem; /* Aumentar tamaño de fuente */
-    line-height: 3.2rem;
+    font-size: 3rem;
+    line-height: 3.4rem;
   }
 
   .header--title-container p {
-    font-size: 1.8rem; /* Aumentar tamaño de fuente */
-    line-height: 2.2rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
 
-  /* Botón en el Header */
   .header--title-container .header--button {
-    width: 300px; /* Aumentar ancho */
-    height: 60px; /* Aumentar altura */
-    padding: 20px; /* Aumentar padding */
-    font-size: 1.6rem; /* Aumentar tamaño de fuente */
-    left: calc(50% - 150px); /* Ajustar posición */
-    top: 320px; /* Ajustar posición */
+    width: 250px;
+    height: 50px;
+    font-size: 1.6rem;
+    margin-top: 105px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .main-exchange-container,
+  .payment-container {
+    padding-top: 100px;
+    padding-bottom: 40px;
   }
 
-  .header--title-container .header--button span {
-    width: 16px; /* Aumentar tamaño del icono */
-    height: 10px;
-    margin-left: 12px; /* Incrementar margen */
-  }
-
-  /* Contenedor Principal de Exchange */
-  .main-exchange-container {
-    padding-top: 100px; /* Incrementar padding superior */
-    padding-bottom: 50px; /* Incrementar padding inferior */
-  }
-
-  .main-exchange-container--title {
-    max-width: 1200px; /* Aumentar max-width */
-  }
-
-  .main-exchange-container .backgroundImg {
-    width: 250px; /* Aumentar tamaño de imagen */
-    height: 250px;
-    margin-bottom: 70px; /* Incrementar margen inferior */
-  }
-
-  .main-exchange-container h2 {
-    font-size: 3rem; /* Aumentar tamaño de fuente */
+  .main-exchange-container h2,
+  .payment-container h2 {
+    font-size: 2.8rem;
     line-height: 3.2rem;
   }
 
-  .main-exchange-container p {
-    font-size: 1.8rem; /* Aumentar tamaño de fuente */
-    line-height: 2.2rem;
+  .main-exchange-container p,
+  .payment-container p {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
   }
 
-  /* Tabla de Monedas */
   .main-currency-table {
-    width: 60%; /* Reducir porcentaje para dejar espacio */
-    max-width: 800px; /* Aumentar max-width */
-    height: 450px; /* Incrementar altura */
-  }
-
-  .main-currency-table .currency-table--title {
-    font-size: 2.4rem; /* Aumentar tamaño de fuente */
-    line-height: 3rem;
-  }
-
-  .main-table-container {
-    width: 95%; /* Ajustar ancho */
-    max-width: 400px; /* Aumentar max-width */
-    height: 300px; /* Incrementar altura */
+    width: 80%;
+    height: 400px;
   }
 
   .currency-table--container td {
-    font-size: 1.8rem; /* Aumentar tamaño de fuente */
-    line-height: 4rem; /* Incrementar line-height */
+    font-size: 1.8rem;
+    line-height: 4.2rem;
   }
+}
 
-  .currency-table--container .table__right {
-    font-size: 1.6rem;
-    line-height: 2rem;
-    padding-top: 25px;
-    padding-bottom: 20px;
-    color: #757575;
-  }
 
-  .currency-table--container .down {
-    width: 20px; /* Aumentar tamaño del icono */
-    height: 20px;
-    margin-left: 12px; /* Incrementar margen */
-  }
-
-  .currency-table--date {
-    width: 220px; /* Aumentar ancho */
-    height: 35px; /* Aumentar altura */
-    margin-top: 20px; /* Incrementar margen superior */
-    padding: 10px; /* Incrementar padding */
-    font-size: 1.4rem; /* Aumentar tamaño de fuente */
-  }
-
-  .currency-table--date p {
-    font-size: 1.4rem; /* Aumentar tamaño de fuente */
-    line-height: 2rem;
-  }
-
-  /* Detalles del Producto */
+@media only screen and (min-width: 768px) {
   .main-product-detail {
-    padding: 30px 20px; /* Incrementar padding */
+    margin-top: 100px; 
   }
 
   .product-detail--batata-logo {
-    width: 50px; /* Aumentar tamaño del logo */
-    height: 30px;
-    top: -15px; /* Ajustar posición vertical */
-  }
-
-  .product-detail--title {
-    width: 85%; /* Ajustar ancho */
-    max-width: 1200px; /* Aumentar max-width */
-    margin-top: 70px; /* Incrementar margen superior */
+    width: 40px; 
+    height: 25px; 
   }
 
   .product-detail--title p {
-    font-size: 1.6rem; /* Aumentar tamaño de fuente */
-    line-height: 2rem;
+    font-size: 1.4rem; 
+    line-height: 1.8rem; 
   }
 
   .product-detail--card {
-    width: 80%; /* Ajustar ancho */
-    max-width: 500px; /* Aumentar max-width */
-    height: 200px; /* Incrementar altura */
-    padding: 20px; /* Aumentar padding */
-  }
-
-  .product-detail--card img {
-    width: 25px; /* Aumentar tamaño de imagen */
-    height: 25px;
-    margin-bottom: 15px; /* Incrementar margen */
+    max-width: 400px; 
+    height: 150px; 
   }
 
   .product--card-title {
-    font-size: 2rem; /* Aumentar tamaño de fuente */
-    line-height: 2rem;
+    font-size: 1.8rem; 
   }
 
   .product--card-body {
-    font-size: 1.6rem; /* Aumentar tamaño de fuente */
-    line-height: 2rem;
+    font-size: 1.4rem; 
   }
 
-  /* Contenedor de Imagen de Bitcoin */
   .bitcoin-img-container {
-    height: 60vh; /* Aumentar altura */
+    height: 50vh; 
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .bitcoin-img-container {
+    height: 50vh; 
   }
 
   .bitcoin-img-container h2 {
-    font-size: 3rem; /* Aumentar tamaño de fuente */
-    line-height: 3.2rem;
-    padding-top: 60px; /* Incrementar padding superior */
+    padding-top: 50px;
+    font-size: 2.4rem; 
+    line-height: 2.6rem;
   }
 }
+
+
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    flex-direction: row; 
+    padding: 20px; 
+  }
+
+  .footer--batata-container {
+    align-items: flex-start; 
+  }
+
+  .footer-content {
+    padding-left: 30px; 
+    text-align: left; 
+  }
+
+  .batata-subtitle {
+    font-size: 8px; 
+  }
+
+  .footer-links {
+    margin-top: 14px; 
+  }
+
+  .footer-links td {
+    margin: 0 15px; 
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .carousel-container {
+    flex-direction: row; 
+    margin: 20px 0px 55px; 
+  }
+
+  .carousel-item {
+    margin: 0 20px; 
+    width: 190px; 
+    height: 247px; 
+    padding: 20px; 
+  }
+
+  .carousel-button {
+    font-size: 2rem; 
+    margin: 0 10px; 
+  }
+
+  .carousel-item h3 {
+    font-size: 14px; 
+  }
+
+  .price {
+    font-size: 52px; 
+    line-height: 62.93px; 
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .choice-button {
+    width: 151px; 
+    font-size: 14px; 
+  }
+
+  .recommended-badge {
+    font-size: 12px; 
+    padding: 5px 10px; 
+  }
+}
+
